@@ -15,6 +15,8 @@
   flex-direction: column;
   border: 1px solid rgba(0, 0, 0, .2);
   background-color: white;
+  min-width: 320px;
+  max-width: 80vw;
 }
 
 .modal-header {
@@ -37,4 +39,21 @@
   font-weight: 700;
   line-height: 1;
   cursor: pointer;
+}
+
+.winner-modal___body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.winner-modal___image {
+  max-width: 260px;
+  max-height: 260px;
+}
+
+.winner-modal___name {
+  font-size: 24px;
+  font-weight: 700;
 }

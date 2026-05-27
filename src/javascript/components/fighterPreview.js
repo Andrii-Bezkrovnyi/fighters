@@ -7,9 +7,51 @@ export function createFighterPreview(fighter, position) {
     className: `fighter-preview___root ${positionClassName}`,
   });
 
-  // todo: show fighter info (image, name, health, etc.)
+  if (!fighter) {
+    const placeholder = createElement({
+      tagName: 'div',
+      className: 'fighter-preview___placeholder',
+    });
+
+    placeholder.innerText = 'Select a fighter';
+    fighterElement.append(placeholder);
+
+    return fighterElement;
+  }
+
+  const image = createFighterImage(fighter);
+  const details = createFighterDetails(fighter);
+  fighterElement.append(image, details);
 
   return fighterElement;
+}
+
+function createFighterDetails(fighter) {
+  const { name, health, attack, defense } = fighter;
+  const details = createElement({
+    tagName: 'div',
+    className: 'fighter-preview___details',
+  });
+
+  const title = createElement({
+    tagName: 'div',
+    className: 'fighter-preview___name',
+  });
+  const stats = createElement({
+    tagName: 'div',
+    className: 'fighter-preview___stats',
+  });
+
+  title.innerText = name;
+  stats.innerHTML = `
+    <div><span>Health:</span> ${health}</div>
+    <div><span>Attack:</span> ${attack}</div>
+    <div><span>Defense:</span> ${defense}</div>
+  `;
+
+  details.append(title, stats);
+
+  return details;
 }
 
 export function createFighterImage(fighter) {

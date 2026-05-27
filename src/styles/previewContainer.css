@@ -29,8 +29,11 @@
   cursor: pointer;
   font-weight: bold;
   box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.75);
+  border: none;
 }
 
+.preview-container___fight-btn:disabled,
 .preview-container___fight-btn.disabled {
-  opacity: 0;
+  opacity: 0.35;
+  cursor: not-allowed;
 }
