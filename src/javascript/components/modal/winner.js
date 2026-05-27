@@ -8,6 +8,14 @@ export function showWinnerModal(fighter) {
     title: 'Winner',
     bodyElement,
   });
+
+  showModal({
+    title: `🏆 Переміг ${fighter.name}! 🏆`,
+    bodyElement,
+    onClose: () => {
+      window.location.reload(); // Reload the page to reset the game state after closing the winner modal
+    }
+  });
 }
 
 function createWinnerBody(fighter) {
@@ -36,3 +44,4 @@ function createWinnerBody(fighter) {
 
   return bodyElement;
 }
+
