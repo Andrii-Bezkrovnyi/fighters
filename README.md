@@ -8,4 +8,8 @@
 
 `npm run start`
 
+`npm install --save-dev jest`
+
+`npm run test`
+
 open http://localhost:9000/
