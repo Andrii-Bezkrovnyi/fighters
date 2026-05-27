@@ -1,0 +1,64 @@
+.fighter-preview___root {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 250px;
+  min-height: 260px;
+  gap: 12px;
+}
+
+.fighter-preview___right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.fighter-preview___left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.fighter-preview___img {
+  max-height: 180px;
+}
+
+.fighter-preview___details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  min-width: 180px;
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.fighter-preview___name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1d1d1d;
+}
+
+.fighter-preview___stats {
+  display: grid;
+  gap: 4px;
+  font-size: 16px;
+  color: #222;
+}
+
+.fighter-preview___stats span {
+  font-weight: 700;
+}
+
+.fighter-preview___placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  min-width: 180px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px dashed rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #3b3b3b;
+}
